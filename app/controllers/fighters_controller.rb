@@ -2,7 +2,7 @@ class FightersController < ApplicationController
 	before_action :find_fighter, only: [:show, :edit, :update, :destroy]
 
 	def index 
-
+		@fighter = Fighter.all.order("created_at DESC")
 	end
 
 	def show

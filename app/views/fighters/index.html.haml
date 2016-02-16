@@ -1,1 +1,4 @@
-%h1 This is the index page
+- @fighter.each do |fighter|
+	%h2= fighter.first_name
+
+=link_to "New Fighter"	, new_fighter_path
