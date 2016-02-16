@@ -1,3 +1,7 @@
 %h1= @fighter.first_name
 %p= @fighter.last_name
 %p= @fighter.description
+
+= link_to "Edit", edit_fighter_path(@fighter)
+= link_to "Delete", fighter_path(@fighter), method: :delete, data: {confirm: "Are you sure?"}
+= link_to "Home", root_path
