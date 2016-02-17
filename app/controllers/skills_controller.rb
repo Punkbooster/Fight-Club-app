@@ -30,7 +30,7 @@ class SkillsController < ApplicationController
 	def destroy
 		@fighter = Fighter.find(params[:fighter_id])
 		@skill = @fighter.skills.find(params[:id])
-		@comment.destroy
+		@skill.destroy
 		redirect_to fighter_path(@fighter)
 	end
 
