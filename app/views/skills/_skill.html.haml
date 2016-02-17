@@ -1,6 +1,6 @@
 .skill
 	%p
 		= skill.name
-		\: #{skill.level} lvl
+		\- #{skill.level} lvl
 		= link_to "Edit", edit_fighter_skill_path(skill.fighter, skill)	
-		= link_to "Delet", [skill.fighter, skill], method: :delete, data: {confirm: "Are you sure?"}	
+		= link_to "Delete", [skill.fighter, skill], method: :delete, data: {confirm: "Are you sure?"}	

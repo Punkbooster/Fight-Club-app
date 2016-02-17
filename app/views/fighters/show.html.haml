@@ -1,5 +1,6 @@
 .fighter_content
-	= image_tag @fighter.image.url(:medium)
+	.fighter_image
+		= image_tag @fighter.image.url(:medium)	
 	%h1
 		= @fighter.first_name
 		= @fighter.last_name	

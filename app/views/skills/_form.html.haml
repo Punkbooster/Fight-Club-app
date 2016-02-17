@@ -1,4 +1,4 @@
 = simple_form_for([@fighter, @fighter.skills.build]) do |f|
-	= f.input :name
-	= f.input :level
+	= f.input :name, label: 'Skill name:'
+	= f.input :level, label: 'Skill level:'
 	= f.submit

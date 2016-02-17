@@ -22,3 +22,16 @@
 	max-width: 1140px;
 	margin: 0 auto;
 }
+
+.fighter_image {
+	float: right;
+}
+
+.cf:after, .cf:before {
+	content: " ";
+	display: table;
+}
+
+.cf:after {
+	clear: both;
+}

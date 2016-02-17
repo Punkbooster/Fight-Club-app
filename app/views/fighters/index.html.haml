@@ -2,5 +2,5 @@
 - @fighter.each do |fighter|
 	%h2
 		= image_tag fighter.image.url(:thumb)
-		= link_to fighter.first_name, fighter
+		= link_to "#{fighter.first_name} #{fighter.last_name}", fighter
 
