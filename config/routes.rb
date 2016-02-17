@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :fighters
-
   root 'fighters#index'
+  
+  resources :fighters do 
+  	resources :skills
+  end
   
 end

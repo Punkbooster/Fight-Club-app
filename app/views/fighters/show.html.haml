@@ -1,7 +1,18 @@
-%h1= @fighter.first_name
-%p= @fighter.last_name
-%p= @fighter.description
+.fighter_content
 
-= link_to "Edit", edit_fighter_path(@fighter)
-= link_to "Delete", fighter_path(@fighter), method: :delete, data: {confirm: "Are you sure?"}
-= link_to "Back", root_path
+	%h1
+		= @fighter.first_name
+		= @fighter.last_name	
+	%p= @fighter.description
+
+	#skills
+		%h2
+			This hero has #{@fighter.skills.count} skills:
+		= render @fighter.skills
+
+		%h3 Add New Skill
+		= render "skills/form"
+
+	= link_to "Edit", edit_fighter_path(@fighter)
+	= link_to "Delete", fighter_path(@fighter), method: :delete, data: {confirm: "Are you sure?"}
+	= link_to "Back", root_path
