@@ -8,7 +8,7 @@
 
 	#skills
 		%h2
-			This hero has #{@fighter.skills.count} skills:
+			This hero has #{pluralize(@fighter.skills.count, "skill")}:
 		= render @fighter.skills
 
 		%h3 Add New Skill
