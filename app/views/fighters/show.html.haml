@@ -6,14 +6,22 @@
 		= @fighter.last_name	
 	%p= @fighter.description
 
+%hr
+
 	#skills
 		%h2
 			This hero has #{pluralize(@fighter.skills.count, "skill")}:
 		= render @fighter.skills
 
-		%h3 Add New Skill
-		= render "skills/form"
+%hr
 
-	= link_to "Edit", edit_fighter_path(@fighter)
-	= link_to "Delete", fighter_path(@fighter), method: :delete, data: {confirm: "Are you sure?"}
-	= link_to "Back", root_path
+	%h3 Add New Skill
+	= render "skills/form"
+
+%hr
+	
+	.buttons
+		= link_to "Edit", edit_fighter_path(@fighter), class: 'button'
+		= link_to "Delete", fighter_path(@fighter), method: :delete, data: {confirm: "Are you sure?"}, class: 'button'
+		= link_to "Back", root_path, class: 'button'
+	%p	

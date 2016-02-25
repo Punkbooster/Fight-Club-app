@@ -14,8 +14,11 @@
  *= require bootstrap
  *= require_self
  */
+// - - - - - - - - - - - - - - Variables - - - - - - - - - - - - - - - - - -
 
-// - - - - - - - - - - - - - - Basic Styles - - - - - - - - - - - - - - - -
+$green: #33CD99;
+
+// - - - - - - - - - - - - - - Global Styles - - - - - - - - - - - - - - - -
 
 .wrapper {
 	width: 60%;
@@ -34,4 +37,58 @@
 
 .cf:after {
 	clear: both;
+}
+
+hr {
+	border-top: 2px solid #eee;
+}
+
+.padding_span {
+	padding-left: 3rem;
+}
+
+// - - - - - - - - - - - - - - Buttons Styles - - - - - - - - - - - - - - - -
+
+.buttons {
+	margin-top: 0rem;
+	a.button {
+		padding: .2rem 2rem;
+		border-radius: 2rem;
+		text-decoration: none;
+		color: $green;
+		border: 5px solid #E9E9E9;
+		background: transparent;
+	}
+}
+
+// - - - - - - - - - - - - - - Skill Styles - - - - - - - - - - - - - - - -
+
+.skill {
+	text-align: left;
+	margin-top: 3rem;
+
+	.buttons {
+		display: inline;
+		float: right;
+		padding-right: 240px;
+
+	}
+
+	p {
+		display: inline;	
+	}
+}
+
+.submit_btn {
+	border: none;
+	outline: none;
+	background: $green;
+	padding: 0.5rem 1.5rem;
+	border-radius: 2rem;
+	margin-top: 1.5rem;
+	color: white;
+	a {
+		color: white;
+		text-decoration: none;
+	}
 }

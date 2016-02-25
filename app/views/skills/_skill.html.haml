@@ -1,6 +1,7 @@
-.skill
+.skill.cf
 	%p
 		= skill.name
 		\- #{skill.level} lvl
-		= link_to "Edit", edit_fighter_skill_path(skill.fighter, skill)	
-		= link_to "Delete", [skill.fighter, skill], method: :delete, data: {confirm: "Are you sure?"}	
+		.buttons
+			= link_to "Edit", edit_fighter_skill_path(skill.fighter, skill), class: "button"	
+			= link_to "Delete", [skill.fighter, skill], method: :delete, data: {confirm: "Are you sure?"}, class: "button"	
