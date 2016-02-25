@@ -61,6 +61,20 @@ hr {
 	}
 }
 
+.submit_btn {
+	border: none;
+	outline: none;
+	background: $green;
+	padding: 0.5rem 1.5rem;
+	border-radius: 2rem;
+	margin-top: 1.5rem;
+	color: white;
+	a {
+		color: white;
+		text-decoration: none;
+	}
+}
+
 // - - - - - - - - - - - - - - Skill Styles - - - - - - - - - - - - - - - -
 
 .skill {
@@ -76,20 +90,6 @@ hr {
 
 	p {
 		display: inline;	
-	}
-}
-
-.submit_btn {
-	border: none;
-	outline: none;
-	background: $green;
-	padding: 0.5rem 1.5rem;
-	border-radius: 2rem;
-	margin-top: 1.5rem;
-	color: white;
-	a {
-		color: white;
-		text-decoration: none;
 	}
 }
 
