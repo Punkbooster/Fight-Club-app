@@ -17,13 +17,14 @@
 // - - - - - - - - - - - - - - Variables - - - - - - - - - - - - - - - - - -
 
 $green: #33CD99;
+$dark_gray: #2B2E2E;
 
 // - - - - - - - - - - - - - - Global Styles - - - - - - - - - - - - - - - -
 
 .wrapper {
 	width: 60%;
 	max-width: 1140px;
-	margin: 0 auto;
+	margin: 7rem auto;
 }
 
 .fighter_image {
@@ -43,9 +44,6 @@ hr {
 	border-top: 2px solid #eee;
 }
 
-.padding_span {
-	padding-left: 3rem;
-}
 
 // - - - - - - - - - - - - - - Buttons Styles - - - - - - - - - - - - - - - -
 
@@ -108,5 +106,52 @@ hr {
 
 	img {
 		display: inline;	
+	}
+}
+
+// - - - - - - - - - - - - - - NavBar Styles - - - - - - - - - - - - - - - -
+
+header {
+	background: $dark_gray;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding: 0.1rem 0;
+	border-bottom: 7px solid $green;
+
+	.header_inner {
+		width: 90%;
+		margin: 0 auto;
+
+		.brand {
+			float: left;
+			height: 50px;
+			padding: 15px 15px;
+			font-size: 18px;
+			line-height: 20px;
+			font-weight: 700;
+			font-size: 2rem;
+			a {
+				text-decoration: none;
+				color: $green;
+			}
+		}
+
+		nav {
+			float: right;
+			a {
+				float: right;
+				height: 50px;
+				padding: 15px 15px;
+				font-size: 18px;
+				line-height: 20px;
+				text-decoration: none;
+				color: white;
+				font-size: 1.6rem;
+				&:hover {
+					color: $green;
+				}
+			}
+		}
 	}
 }

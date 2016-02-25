@@ -6,15 +6,12 @@
 		= javascript_include_tag 'application', 'data-turbolinks-track' => true
 		= csrf_meta_tags
 	%body
-		%nav.navbar.navbar-default
-			.container-fluid
-				.navbar-header
-					%a.navbar-brand{:href => "#"} Fight Club
-					%ul.nav.navbar-nav
-						%li.active
-							=link_to "Home", root_path
-						%li
-							=link_to "New Fighter", new_fighter_path	
+		%header
+			.header_inner
+				.brand
+					=link_to "DARKEST DUNGEON", root_path
+				%nav
+					=link_to "New Fighter", new_fighter_path	
 
 	.wrapper
 		= yield
