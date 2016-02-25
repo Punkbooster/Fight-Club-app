@@ -92,3 +92,21 @@ hr {
 		text-decoration: none;
 	}
 }
+
+// - - - - - - - - - - - - - - Fighter Styles - - - - - - - - - - - - - - - -
+
+.fighter {
+	text-align: left;
+	margin-top: 3rem;
+
+	.buttons {
+		display: inline;
+		float: right;
+		padding-right: 240px;
+
+	}
+
+	img {
+		display: inline;	
+	}
+}
