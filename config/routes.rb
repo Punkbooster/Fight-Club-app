@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   
   resources :fights
 
+  get 'fighters/leaderboard'
+
+
   resources :fighters do 
   	resources :skills
   end

@@ -11,8 +11,10 @@
 				.brand
 					=link_to "DARKEST DUNGEON", root_path
 				%nav
+					=link_to "Leaderboard", fighters_leaderboard_path	
 					=link_to "New Fighter", new_fighter_path	
 					=link_to "New Fight", new_fight_path	
+
 
 	.wrapper
 		= yield

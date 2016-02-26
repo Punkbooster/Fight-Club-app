@@ -1,0 +1,23 @@
+%h1 Leaderboard
+%table.table.table-striped
+	%thead
+		%tr
+			%th Name
+			%th Surname
+			%th Skills amount
+			%th Experience
+			%th Battlepoints
+
+	%tbody
+		- @fighter.sort { |a,b| b.skills.sum(:level) + b.experience <=> a.skills.sum(:level) + a.experience }.each do |fighter|
+			%tr
+				%td= fighter.first_name
+				%td= fighter.last_name
+				%td= fighter.skills.count
+				%td= fighter.experience
+				%td= fighter.skills.sum(:level) + fighter.experience
+
+%p
+	%strong *Battlepoints - sum of all skills level and experience points
+
+

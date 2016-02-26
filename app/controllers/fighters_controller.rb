@@ -5,6 +5,10 @@ class FightersController < ApplicationController
 		@fighter = Fighter.all.order("created_at DESC")
 	end
 
+	def leaderboard
+		@fighter = Fighter.all
+	end
+
 	def show
 	end
 
