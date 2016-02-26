@@ -15,11 +15,19 @@ class FightsController < ApplicationController
 		if @fight.fighter_1.experience > @fight.fighter_2.experience
 			@fight.winner = @fight.fighter_1
 			@fight.winner.experience += 1
+			@fight.winner.wins += 1
+			@fight.fighter_2.losses += 1
+
+			@fight.fighter_2.save
 			@fight.winner.save
 			
 		elsif @fight.fighter_2.experience > @fight.fighter_1.experience
 			@fight.winner = @fight.fighter_2
 			@fight.winner.experience += 1
+			@fight.winner.wins += 1
+			@fight.fighter_1.losses += 1
+			
+			@fight.fighter_1.save
 			@fight.winner.save
 		else
 		end

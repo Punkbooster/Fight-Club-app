@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160225181305) do
+ActiveRecord::Schema.define(version: 20160226125219) do
 
   create_table "fighters", force: :cascade do |t|
     t.string   "first_name"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20160225181305) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "experience",         default: 0
+    t.integer  "wins",               default: 0
+    t.integer  "losses",             default: 0
   end
 
   create_table "fights", force: :cascade do |t|

@@ -2,5 +2,15 @@
 	Winner is:
 	= @fight.winner
 %h3 
-	His experiance is:
+	His experience is:
 	= @fight.winner.experience
+
+%h3 
+	His statats now:
+
+%p
+	Wins
+	= @fight.winner.wins
+	\:
+	= @fight.winner.losses
+	Losses
