@@ -12,9 +12,22 @@ class FightsController < ApplicationController
 	def create
 		@fight = Fight.new(fight_params)
 
-		@fight.winner = @fight.fighter_1
+		if @fight.fighter_1.experience > @fight.fighter_2.experience
+			@fight.winner = @fight.fighter_1
+			@fight.winner.experience += 1
+			@fight.winner.save
+			
+		elsif @fight.fighter_2.experience > @fight.fighter_1.experience
+			@fight.winner = @fight.fighter_2
+			@fight.winner.experience += 1
+			@fight.winner.save
+		else
+		end
+
 		if @fight.save
+
 			redirect_to @fight
+			
 		else
 			render 'new'
 		end

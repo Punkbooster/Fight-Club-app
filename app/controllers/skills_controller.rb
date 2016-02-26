@@ -8,7 +8,7 @@ class SkillsController < ApplicationController
 		if @skill.save
 			redirect_to fighter_path(@fighter)
 		else
-			render 'new'
+			render 'form'
 		end
 	end
 
