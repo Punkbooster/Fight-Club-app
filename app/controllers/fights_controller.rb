@@ -12,7 +12,7 @@ class FightsController < ApplicationController
 	def create
 		@fight = Fight.new(fight_params)
 
-		if @fight.fighter_1.experience > @fight.fighter_2.experience
+		if @fight.fighter_1.experience + @fight.fighter_1.skills.all.sum(:level) > @fight.fighter_2.experience + @fight.fighter_2.skills.all.sum(:level)
 			@fight.winner = @fight.fighter_1
 			@fight.winner.experience += 1
 			@fight.winner.wins += 1
@@ -21,7 +21,7 @@ class FightsController < ApplicationController
 			@fight.fighter_2.save
 			@fight.winner.save
 			
-		elsif @fight.fighter_2.experience > @fight.fighter_1.experience
+		elsif @fight.fighter_2.experience + @fight.fighter_2.skills.all.sum(:level) > @fight.fighter_1.experience + @fight.fighter_1.skills.all.sum(:level)
 			@fight.winner = @fight.fighter_2
 			@fight.winner.experience += 1
 			@fight.winner.wins += 1

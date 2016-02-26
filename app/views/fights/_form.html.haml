@@ -1,4 +1,11 @@
-= simple_form_for @fight, html: { multipart: true } do |f|
-	=f.input :fighter_1_id, collection: Fighter.all
-	=f.input :fighter_2_id, collection: Fighter.all
-	=f.submit
+.row
+	.col-md-8
+		= simple_form_for @fight, html: { multipart: true } do |f|
+			=f.input :fighter_1_id, collection: Fighter.all
+			=f.input :fighter_2_id, collection: Fighter.all
+			=f.submit class: 'submit_btn'
+
+%hr
+
+.buttons
+	= link_to "Cancel", root_path, class: 'button'			

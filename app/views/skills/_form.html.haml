@@ -3,6 +3,6 @@
 		= simple_form_for([@fighter, @fighter.skills.build]) do |f|
 			= f.error_notification
 
-			= f.input :name, label: 'Skill name:'
-			= f.input :level, label: 'Skill level:', collection: 1..5
+			= f.input :name, label: 'Skill name:', presence: true
+			= f.input :level, label: 'Skill level:', collection: 0..5
 			= f.submit class: 'submit_btn'
