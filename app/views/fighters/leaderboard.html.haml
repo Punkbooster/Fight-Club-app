@@ -2,6 +2,7 @@
 %table.table.table-striped
 	%thead
 		%tr
+			%th #
 			%th Name
 			%th Surname
 			%th Skills amount
@@ -9,8 +10,9 @@
 			%th Battlepoints
 
 	%tbody
-		- @fighter.sort { |a,b| b.skills.sum(:level) + b.experience <=> a.skills.sum(:level) + a.experience }.each do |fighter|
+		- @fighter.sort { |a,b| b.skills.sum(:level) + b.experience <=> a.skills.sum(:level) + a.experience }.each_with_index do |fighter, index|
 			%tr
+				%th= index + 1
 				%td= fighter.first_name
 				%td= fighter.last_name
 				%td= fighter.skills.count
