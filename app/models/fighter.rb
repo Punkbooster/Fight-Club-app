@@ -5,4 +5,8 @@ class Fighter < ActiveRecord::Base
 	styles: { medium: "300x300>", thumb: "100x100>" }
 	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
+	def to_s
+		first_name + " " + last_name
+	end
+
 end

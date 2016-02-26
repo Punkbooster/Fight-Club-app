@@ -1,0 +1,4 @@
+= simple_form_for @fight, html: { multipart: true } do |f|
+	=f.input :fighter_1_id, collection: Fighter.all
+	=f.input :fighter_2_id, collection: Fighter.all
+	=f.submit

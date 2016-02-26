@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160225120333) do
+ActiveRecord::Schema.define(version: 20160225181305) do
 
   create_table "fighters", force: :cascade do |t|
     t.string   "first_name"
@@ -25,6 +25,18 @@ ActiveRecord::Schema.define(version: 20160225120333) do
     t.datetime "image_updated_at"
     t.integer  "experience",         default: 0
   end
+
+  create_table "fights", force: :cascade do |t|
+    t.integer  "fighter_1_id"
+    t.integer  "fighter_2_id"
+    t.integer  "winner_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "fights", ["fighter_1_id"], name: "index_fights_on_fighter_1_id"
+  add_index "fights", ["fighter_2_id"], name: "index_fights_on_fighter_2_id"
+  add_index "fights", ["winner_id"], name: "index_fights_on_winner_id"
 
   create_table "skills", force: :cascade do |t|
     t.string   "name"
