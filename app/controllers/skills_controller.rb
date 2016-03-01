@@ -5,11 +5,12 @@ class SkillsController < ApplicationController
 	def create
 		@skill = @fighter.skills.create(params[:skill].permit(:name, :level))
 
-		if @skill.save
-			redirect_to fighter_path(@fighter)
+		if @skill.errors.any?
+			render "fighters/show"
 		else
-			render 'form'
+			redirect_to @fighter
 		end
+
 	end
 
 	def edit 

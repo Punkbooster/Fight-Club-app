@@ -5,4 +5,6 @@ class Skill < ActiveRecord::Base
 	name
   end
 
+  #validates :name, presence: true
+
 end
