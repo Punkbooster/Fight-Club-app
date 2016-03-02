@@ -25,6 +25,7 @@ $dark_gray: #2B2E2E;
 	width: 60%;
 	max-width: 1140px;
 	margin: 7rem auto;
+	min-height: 365px;
 }
 
 .fighter_image {
@@ -153,5 +154,19 @@ header {
 				}
 			}
 		}
+	}
+}
+
+// - - - - - - - - - - - - - - Footer Styles - - - - - - - - - - - - - - - -
+
+footer {
+	background: $dark_gray;
+	width: 100%;
+	padding: 2rem 0;
+	color: white;
+	text-align: center;
+	p {
+		margin: 0;
+		font-size: .85rem;
 	}
 }
