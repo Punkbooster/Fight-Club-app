@@ -6,6 +6,8 @@ RSpec.configure do |config|
   config.mock_with :rspec do |mocks|
      mocks.verify_partial_doubles = true
   end
+  
+  require 'factory_girl_rails'
   require 'capybara/rspec'
   config.include Capybara::DSL
 
