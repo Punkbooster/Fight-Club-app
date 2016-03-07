@@ -6,7 +6,7 @@ class SkillsController < ApplicationController
 		@skill = @fighter.skills.create(params[:skill].permit(:name, :level))
 
 		if @skill.save
-			redirect_to @fighter
+			redirect_to fighter_path(@fighter)
 		else
 			render "fighters/show"
 		end
