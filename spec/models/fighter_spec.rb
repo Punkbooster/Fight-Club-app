@@ -3,7 +3,7 @@ require 'spec_helper'
 
 RSpec.describe Fighter, type: :model do
 
-	context "valid Factory" do
+	context "Valid factory" do
 		it "has a valid factory" do
 			expect(FactoryGirl.build(:fighter)).to be_valid
 		end 
