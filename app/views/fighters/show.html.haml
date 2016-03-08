@@ -33,6 +33,6 @@
 	
 	.buttons
 		= link_to "Edit", edit_fighter_path(@fighter), class: 'button'
-		= link_to "Delete", fighter_path(@fighter), method: :delete, data: {confirm: "Are you sure?"}, class: 'button'
+		= link_to "Delete", fighter_path, method: :delete, data: {confirm: "Are you sure?"}, class: 'button'
 		= link_to "Back", root_path, class: 'button'
 	%p	
