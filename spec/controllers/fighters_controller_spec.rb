@@ -32,4 +32,40 @@ RSpec.describe FightersController, type: :controller do
 		end
 	end
 
+	describe "DELETE #destroy" do
+		it "destroys the requested fighter" do
+			@fighter = FactoryGirl.create(:fighter)
+			expect {
+				delete :destroy, {id: @fighter.to_param}
+			}.to change(Fighter, :count).by(-1)
+		end
+
+		it "redirects to the fighters list" do
+			@fighter = FactoryGirl.create(:fighter)
+			delete :destroy, {id: @fighter.to_param}
+			expect(response).to redirect_to(root_url)
+		end
+	end
+
+=begin
+	describe "#create method" do
+
+		it "creates fighter" do
+
+			expect {
+				post :create, @fighter = FactoryGirl.create(:fighter) 
+			}.to change(Fighter, :count).by(1)
+		end
+	end
+
+	describe "GET #edit" do
+		it "assigns the requested fighter as fighter" do
+			@fighter = FactoryGirl.create(:fighter)
+			get :edit, {id: @fighter.to_param}
+			expect(controller.fighter).to eq @fighter
+		end
+	end
+
+=end
+
 end
