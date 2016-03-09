@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'spec_helper'
 
-RSpec.describe "main functionality", type: feature do
+RSpec.describe "Perform fight", type: feature do
 
 	it "Create fighters & skills, create fight" do
 		visit '/fighters/new'
