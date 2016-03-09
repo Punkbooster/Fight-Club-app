@@ -1,4 +1,5 @@
 Rails.application.configure do
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -76,4 +77,14 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['imagesfightapp'],
+    :access_key_id => ENV['AKIAJ4J73QMWNPZL2LPA'],
+    :secret_access_key => ENV['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']
+  }
+}
+
 end
